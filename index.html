@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <!-- Metadados essenciais -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Informações para SEO -->
+        <meta name="description" content="Bem vindo à nossa área reservada a assuntos relacionados à Psicologia Educacional e Educação Especial!">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="http://127.0.0.1:3000/index.html">
+    
+        <!-- Título da página -->
+        <title>Página Principal</title>
+    
+        <!-- Open Graph para redes sociais -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Psicologia Educacional | Educação Especial">
+        <meta property="og:description" content="Solicite atendimento para Psicologia, Pedagogia, Psicopedagogia, Educação Especial, Palestras e Formações.">
+        <meta property="og:image" th:content="@{/assets/icons/favicon.png}">
+        <meta property="og:url" content="http://127.0.0.1:3000/index.html">
+    
+        <!-- Ícones -->
+        <link rel="icon" th:href="@{/assets/icons/favicon.png}" type="image/x-icon">
+        <link rel="apple-touch-icon" th:href="@{/assets/icons/favicon.png}">
+    
+        <!-- Estilo CSS -->
+        <link rel="stylesheet" href="/css/style.css"/>
+    
+        <!-- Fontes externas do Google Fonts e Anônimo -->
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap">
+    
+        <!-- Scripts assíncronos -->
+        <script src="/js/script.js" defer></script>
+    </head>
+    <body>
+        <button class="menu" type="button" aria-label="Menu">
+            <img src="/assets/icons/cardapio-96.png" alt="Ícone de menu.">
+        </button>
+        <nav class="dropdown_wrapper hide dropdown_wrapper--fade-in none">
+            <ul>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#agendamento">Agendamento</a></li>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <a href="#begin" class="up" aria-label="Voltar ao topo">
+            <img src="/assets/icons/seta-para-cima-96.png" alt="Ícone de seta para cima.">
+        </a>
+        <header>
+            <h1 id="begin">Cássia Valto</h1>
+        </header>
+        <hr>
+        <main>
+            <section class="greeting" aria-labelledby="bem-vindo">
+                <img src="/assets/images/img1.jpg" alt="Imagem de uma flor com o céu azul no fundo.">
+                <div class="welcome">
+                    <h2 id="bem-vindo">Seja Bem-Vindo</h2>
+                    <p id="txtWelcome"></p>
+                </div>
+            </section>
+            <section class="containerJobs" aria-labelledby="servicos">
+                <div class="header">
+                    <h2 id="servicos">Serviços Disponíveis</h2>
+                    <p>Caso precise de algum desses serviços, agende um horário!</p>
+                </div>
+                <div class="jobs">
+                    <article class="job">
+                        <img src="/assets/images/psicologia-infantil.png" alt="Imagem de duas crianças em psicoterapia.">
+                        <h3>Psicologia Infantil</h3>
+                        <p id="txtPsicInf"></p>
+                    </article>
+                    <article class="job">
+                        <img src="/assets/images/educacao-especial.png" alt="Imagem de crianças em atividades escolares.">
+                        <h3>Educação Especial</h3>
+                        <p id="txtEducEsp"></p>
+                    </article>
+                    <article class="job">
+                        <img src="/assets/images/psicologia-distancia.png" alt="Imagem de reunião on-line.">
+                        <h3>Psicologia à Distância</h3>
+                        <p id="txtPsicDist"></p>
+                    </article>
+                    <article class="job">
+                        <img src="/assets/images/psicopedagogia.png" alt="Imagem de criança escrevendo em um caderno.">
+                        <h3>Psicopedagogia</h3>
+                        <p id="txtPsicopedag"></p>
+                    </article>
+                    <article class="job">
+                        <img src="/assets/images/assessoria-escolar.png" alt="Imagem de crianças em uma mesa, merendando.">
+                        <h3>Assessoria Escolar</h3>
+                        <p id="txtAssesEsc"></p>
+                    </article>
+                    <article class="job">
+                        <img src="/assets/images/palestra.png" alt="Imagem de pessoa no palco palestrando para alguns espectadores.">
+                        <h3>Palestras e Formações</h3>
+                        <p id="txtPalForm"></p>
+                    </article>
+                </div>
+            </section>
+            <section class="containerForms" aria-labelledby="agendamento">
+                <div class="header">
+                    <h2 id="agendamento">Agendamento</h2>
+                </div>
+                <div class="forms">
+                    <div class="form">
+                        <form>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeRxaF99SdkhcdZm_jP3ybnLkPbob-_3S57ZTCjY6pOeQny7A/viewform?embedded=true" width="480" height="1130" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+                        </form>
+                        <br>
+                        <a href="/politica-de-privacidade.html" target="blank">Política de Privacidade</a>
+                    </div>
+                </div>
+            </section>
+            <section class="containerAbout" aria-labelledby="sobre">
+                <div class="header">
+                    <h2 id="sobre">Sobre Mim</h2>
+                </div>
+                <div class="about">
+                    <img src="/assets/images/cassia.jpg" alt="Imagem de Cássia atuando em uma formação.">
+                    <div class="aboutMe">
+                        <p id="txtAbouteMe01"></p>
+                        <p id="txtAbouteMe02"></p>
+                        <p id="txtAbouteMe03"></p>
+                        <p id="txtAbouteMe04"></p>
+                        <p id="txtAbouteMe05"></p>
+                        <p id="txtAbouteMe06"></p>
+                        <p id="txtAbouteMe07"></p>
+                        <p id="txtAbouteMe08"></p>
+                        <p id="txtAbouteMe09"></p>
+                        <p id="txtAbouteMe10"></p>
+                        <p id="txtAbouteMe11"></p>
+                        <p id="txtAbouteMe12"></p>
+                        <p id="txtAbouteMe13"></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="containerFooter" aria-labelledby="contato">
+                <ul>
+                    <h3 id="contato">Entre em contato!</h3><br>
+                    <li>
+                        <img src="/assets/icons/instagram-96.png" alt="Ícone do Instagram.">
+                        <a href="https://www.instagram.com/cassia_psicologiaeinclusao/" target="_blank">@cassia_psicologiaeinclusao</a>
+                    </li>
+                    <li>
+                        <img src="/assets/icons/whatsapp-96.png" alt="Ícone do WhatsApp.">
+                        (11) 95239-4259
+                    </li>
+                    <li>
+                        <img src="/assets/icons/gmail-novo-96.png" alt="Ícone do GMail.">
+                        psi.incluir@gmail.com
+                    </li>
+                </ul>
+                <div class="assign">
+                    <h3>Cássia Valto Psicóloga e Especialista</h3>
+                    <h3>em Educação Especial</h3><br/><br/>
+                    <p>Local - São Paulo, Bairro Vila Regente Feijó</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

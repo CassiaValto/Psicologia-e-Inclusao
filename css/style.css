@@ -1,0 +1,493 @@
+/* =================== VARIÁVEIS =================== */
+:root {
+    --mainBackground: #eae4c0;
+    --secondBackground: #a7b865;
+    --thirdBackground: #5a633d;
+    --mainLetter: #594423;
+    --secondLetter: #eae4c0;
+}
+
+/* =================== ESTRUTURA GERAL =================== */
+body {
+    background-color: var(--mainBackground);
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Quicksand', sans-serif;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    width: 3rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--secondLetter);
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--mainLetter);
+}
+
+.menu {
+    position: fixed;
+    top: 2.5rem;
+    left: 1rem;
+    background: none;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.menu:hover {
+    transform: scale(0.95);
+}
+
+.dropdown_wrapper {
+    text-decoration: none;
+    position: fixed;
+    width: 10rem;
+    top: 2.5rem;
+    left: 5rem;
+    padding: 1rem;
+    border-radius: 15px;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    animation: fadeOutAnimation ease-in-out 0.3s forwards;
+}
+
+.dropdown_wrapper--fade-in {
+    animation: fadeInAnimation ease-in-out 0.3s forwards;
+}
+
+.none {
+    display: none;
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeOutAnimation ease-in-out 0.3s forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 0.6;
+        visibility: visible;
+    }
+}
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 0.6;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+header {
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.up {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.up:hover {
+    transform: scale(0.95);
+}
+
+h1 {
+    font-family: 'Cardo', serif;
+    font-weight: 500;
+    font-size: clamp(1.5rem, 6vw, 4rem);
+    color: var(--mainLetter);
+    margin: 0;
+}
+
+hr {
+
+    margin: 0 25px 40px 25px;
+    border: 0;
+    height: 2px;
+    background-color: var(--mainLetter);
+}
+
+main {
+    padding: 0;
+}
+
+/* =================== APRESENTAÇÃO =================== */
+.greeting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+
+.greeting img {
+    width: 100%;
+    max-width: 840px;
+    height: auto;
+    flex: 1 1 45%;
+}
+
+.welcome {
+    flex: 1 1 40%;
+    text-align: center;
+    color: var(--mainLetter);
+}
+
+.welcome h2 {
+    font-family: 'Cardo', serif;
+    font-weight: 500;
+    font-size: clamp(1.25rem, 4.5vw, 3.5rem);
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    padding: 0 10%;
+    font-size: clamp(1rem, 4vw, 2rem);
+    text-align: center;
+}
+
+/* =================== TÍTULOS =================== */
+.header {
+    background-color: var(--secondBackground);
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--mainLetter)
+}
+
+.header h2 {
+    font-family: 'Cardo', serif;
+    font-weight: 500;
+    font-size: clamp(1.25rem, 4.5vw, 3.5rem);
+    margin: 0;
+}
+
+.header p {
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-weight: 400;
+    margin: 0;
+}
+
+/* =================== SERVIÇOS =================== */
+.jobs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    padding: 80px 60px;
+}
+
+.job {
+    background-color: var(--thirdBackground);
+    flex: 1 1 min(100%, 380px);
+    padding: 20px;
+    text-align: center;
+    color: var(--secondLetter);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.job img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.job h3 {
+    font-family: 'Cardo', serif;
+    font-weight: 100;
+    font-size: 1.75rem;
+    margin: 10px 0;
+}
+
+.job p {
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* =================== FORMULÁRIO =================== */
+.forms {
+    background-image: url("/assets/images/bckgnd1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: clamp(4rem, 9.25vw, 10rem);
+}
+
+.form {
+    background-color: var(--thirdBackground);
+    max-width: 480px;
+    flex: 1 1 min(100%, 480px);
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--secondLetter);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.containerForms a {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--secondLetter);
+    text-decoration: none;
+}
+
+/*input, select {
+    width: 80%;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 1.35rem;
+    text-align: center;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+input::placeholder {
+    color:var(--mainLetter);
+}
+
+input[type="submit"] {
+    font-size: 1.6rem;
+    background: var(--secondBackground);
+    color: var(--secondLetter);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+input[type="submit"]:hover {
+    box-shadow:  0 0 10px var(--secondBackground), 0 0 60px var(--secondBackground);
+    transform: scale(1.05);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+select {
+    color: var(--mainLetter);
+    cursor: pointer;
+}*/
+
+/* =================== SOBRE MIM =================== */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.about img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    flex: 1 1 45%;
+}
+
+.aboutMe {
+    flex: 1 1 40%;
+    text-align: justify;
+    color: var(--mainLetter);
+}
+
+.aboutMe p {
+    margin: 0.5rem;
+    padding: 0 5%;
+    font-size: 1.3rem;
+}
+
+/* =================== RODAPÉ =================== */
+footer {
+    background-color: var(--thirdBackground);
+}
+
+.containerFooter {
+    padding: 20px 0 ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+ul img {
+    width: 2rem;
+}
+
+ul > li {
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--secondLetter);
+}
+
+.containerFooter h3 {
+    font-family: 'Cardo', serif;
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: var(--secondLetter);
+    margin: 0;
+}
+
+.containerFooter a, .containerFooter p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--secondLetter);
+    text-decoration: none;
+}
+
+.assign {
+    text-align: right;
+    padding: 0 0 25px 0;
+}
+
+/* =================== RESPONSIVIDADE =================== */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .welcome h2 {
+        font-size: 3rem;
+    }
+
+    .header h2 {
+        font-size: 3rem;
+    }
+
+    .header p {
+        font-size: 1.5rem;
+    }
+
+    .job {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .greeting, .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome, .greeting img, .aboutMe, .about img {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .welcome h2 {
+        font-size: 2.5rem;
+    }
+
+    .jobs {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .job {
+        max-width: 90%;
+    }
+
+    .header h2 {
+        font-size: 2.5rem;
+    }
+
+    .header p {
+        font-size: 1.25rem;
+    }
+
+    .form {
+        padding: 2rem 1rem;
+    }
+
+    .aboutMe p {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .welcome p, .header p, .aboutMe p {
+        font-size: 1rem;
+    }
+
+    .welcome h2, .header h2 {
+        font-size: 2rem;
+    }
+
+    .header p, .welcome p {
+        font-size: 1rem;
+    }
+
+    .job h3 {
+        font-size: 1.25rem;
+    }
+
+    .job p {
+        font-size: 0.9rem;
+    }
+}
